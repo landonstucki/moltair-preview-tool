@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Preview Tool</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <div class="preview-toolbox" id="preview-toolbox">
+    <!-- LEFT PANEL -->
+    <div class="left-panel">
+      <div class="product-header" id="product-header">
+        *Product Name*
+      </div>
+
+      <!-- Product Previewer (white spot) -->
+      <div class="product-preview" id="product-preview">
+        <div class="preview-image-container">
+          <!-- Base bottle image -->
+          <img
+            id="bottle-image"
+            src="bottle_blue_32.png"
+            alt="Bottle Preview"
+          />
+
+          <!-- Overlay #1: Text from LINE 1 -->
+          <div id="overlay-line1" class="overlay-text line1-text"></div>
+
+          <!-- Overlay #2: Chosen library image -->
+          <div id="overlay-image" class="overlay-img"></div>
+
+          <!-- Overlay #3: Text from LINE 2 -->
+          <div id="overlay-line2" class="overlay-text line2-text"></div>
+        </div>
+      </div>
+
+      <!-- Upload or Control Buttons -->
+      <div class="cart-item">
+        <button>Choose Checkout Item</button>
+      </div>
+    </div>
+
+    <!-- RIGHT PANEL -->
+    <div class="right-panel">
+      <!-- Text Customization Section -->
+      <div class="text-creator-header">
+        <h1>Text Customization</h1>
+      </div>
+      <div class="text-selector">
+        <!-- ROW 1: Line 1 text & font -->
+        <div class="label">Line 1</div>
+        <div class="dropdown">
+          <select name="font1" id="font1">
+            <option value="" disabled selected>Choose Font</option>
+            <!-- Sans-serif -->
+            <option value="Arial, sans-serif">Arial</option>
+            <option value="Arial Black, Gadget, sans-serif">Arial Black</option>
+            <option value="Helvetica, sans-serif">Helvetica</option>
+            <option value="Verdana, sans-serif">Verdana</option>
+            <option value="Tahoma, sans-serif">Tahoma</option>
+            <option value="'Trebuchet MS', sans-serif">Trebuchet MS</option>
+            <option value="Calibri, sans-serif">Calibri</option>
+            <option value="Geneva, sans-serif">Geneva</option>
+            <!-- Serif -->
+            <option value="Times New Roman, serif">Times New Roman</option>
+            <option value="Georgia, serif">Georgia</option>
+            <option value="Cambria, serif">Cambria</option>
+            <option value="Garamond, serif">Garamond</option>
+            <option value="Palatino, 'Palatino Linotype', serif">Palatino</option>
+            <option value="'Book Antiqua', serif">Book Antiqua</option>
+            <!-- Monospace -->
+            <option value="Courier, monospace">Courier</option>
+            <option value="Courier New, monospace">Courier New</option>
+            <option value="Consolas, monospace">Consolas</option>
+            <option value="'Lucida Console', monospace">Lucida Console</option>
+            <option value="Monaco, monospace">Monaco</option>
+            <!-- Cursive & Fantasy -->
+            <option value="'Comic Sans MS', cursive">Comic Sans MS</option>
+            <option value="Brush Script MT, cursive">Brush Script MT</option>
+            <option value="Impact, fantasy">Impact</option>
+            <option value="fantasy">Fantasy</option>
+            <!-- Generic -->
+            <option value="sans-serif">Generic sans-serif</option>
+            <option value="serif">Generic serif</option>
+            <option value="monospace">Generic monospace</option>
+            <option value="cursive">Generic cursive</option>
+            <option value="fantasy">Generic fantasy</option>
+          </select>
+        </div>
+        <div class="input">
+          <input type="text" id="input-line1" placeholder="Text Input 1" />
+        </div>
+
+        <!-- ROW 2: Line 2 text & font -->
+        <div class="label">Line 2</div>
+        <div class="dropdown">
+          <select name="font2" id="font2">
+            <option value="" disabled selected>Choose Font</option>
+            <!-- repeat same list for Line 2 -->
+            <option value="Arial, sans-serif">Arial</option>
+            <option value="Arial Black, Gadget, sans-serif">Arial Black</option>
+            <option value="Helvetica, sans-serif">Helvetica</option>
+            <option value="Verdana, sans-serif">Verdana</option>
+            <option value="Tahoma, sans-serif">Tahoma</option>
+            <option value="'Trebuchet MS', sans-serif">Trebuchet MS</option>
+            <option value="Calibri, sans-serif">Calibri</option>
+            <option value="Geneva, sans-serif">Geneva</option>
+            <option value="Times New Roman, serif">Times New Roman</option>
+            <option value="Georgia, serif">Georgia</option>
+            <option value="Cambria, serif">Cambria</option>
+            <option value="Garamond, serif">Garamond</option>
+            <option value="Palatino, 'Palatino Linotype', serif">Palatino</option>
+            <option value="'Book Antiqua', serif">Book Antiqua</option>
+            <option value="Courier, monospace">Courier</option>
+            <option value="Courier New, monospace">Courier New</option>
+            <option value="Consolas, monospace">Consolas</option>
+            <option value="'Lucida Console', monospace">Lucida Console</option>
+            <option value="Monaco, monospace">Monaco</option>
+            <option value="'Comic Sans MS', cursive">Comic Sans MS</option>
+            <option value="Brush Script MT, cursive">Brush Script MT</option>
+            <option value="Impact, fantasy">Impact</option>
+            <option value="fantasy">Fantasy</option>
+            <option value="sans-serif">Generic sans-serif</option>
+            <option value="serif">Generic serif</option>
+            <option value="monospace">Generic monospace</option>
+            <option value="cursive">Generic cursive</option>
+            <option value="fantasy">Generic fantasy</option>
+          </select>
+        </div>
+        <div class="input">
+          <input type="text" id="input-line2" placeholder="Text Input 2" />
+        </div>
+      </div>
+
+      <div class="library-header">
+        <h1>Library Templates</h1>
+      </div>
+      <div class="library-selector" id="library-selector">
+        <!-- JS injects .library-box elements here -->
+      </div>
+
+      <div class="upload-button">
+        <button>Custom Upload</button>
+      </div>
+
+      <div class="template-browser" id="template-browser">
+        <!-- JS injects .template-button thumbnails here -->
+      </div>
+    </div>
+  </div>
+
+  <div class="finalize-item" id="finalize-item">
+    <button>Finalize / Add to Cart</button>
+  </div>
+
+  <script src="previewtool.js"></script>
+</body>
+</html>
